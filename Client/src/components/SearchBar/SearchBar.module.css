@@ -1,0 +1,36 @@
+.input{
+    color: var(--text-color);
+    padding: 0.1rem;
+    margin-top: 1.5rem;
+}
+
+.input:hover{
+   color:rgb(21, 221, 21)
+}
+
+.input::placeholder{
+    color: green
+}
+
+.input:focus{
+    border-color: green;
+}
+
+.btn{
+    display: inline-block;
+    background-color: transparent;
+    color: green;
+    font-weight: 700;
+    border: 2px green solid;
+    border-radius: 0px 5px 5px 0px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    padding: 0.1rem 0.5rem;
+    background-color: white;
+
+}
+.btn:hover {
+    filter: brightness(1.5);
+    transform: scale(1.2);
+  }
