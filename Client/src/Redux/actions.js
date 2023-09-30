@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ADD_FAV, REMOVE_FAV, FILTER_FAV, ORDER_FAV } from "./action-type";
-
+3001;
 // export const addFav =(payload) => {
 //     return {
 //         type:  ADD_FAV,
@@ -10,7 +10,8 @@ import { ADD_FAV, REMOVE_FAV, FILTER_FAV, ORDER_FAV } from "./action-type";
 //ADD FAV CON ASYNC AWAIT
 export const addFav = (character) => async (dispatch) => {
   try {
-    const endpoint = "http://localhost:3001/rickandmorty/fav";
+    const endpoint =
+      "https://rickandmortybackend-1r93.onrender.com/rickandmorty/fav";
     const { data } = await axios.post(endpoint, character);
 
     dispatch({
@@ -43,7 +44,8 @@ export const addFav = (character) => async (dispatch) => {
 //     }
 // }
 export const removeFav = (id) => {
-  const endpoint = "http://localhost:3001/rickandmorty/fav/" + id;
+  const endpoint =
+    "https://rickandmortybackend-1r93.onrender.com/rickandmorty/fav/" + id;
   return async (dispatch) => {
     try {
       const { data } = await axios.delete(endpoint);
