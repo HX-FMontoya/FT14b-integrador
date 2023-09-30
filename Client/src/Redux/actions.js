@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ADD_FAV, REMOVE_FAV, FILTER_FAV, ORDER_FAV } from "./action-type";
-3001;
+
 // export const addFav =(payload) => {
 //     return {
 //         type:  ADD_FAV,
