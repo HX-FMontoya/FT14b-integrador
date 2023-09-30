@@ -4,11 +4,15 @@ module.exports = (sequelize) => {
   sequelize.define(
     "Favorite",
     {
-      id: {
+      idDB: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
-        // autoIncrement: true
+        autoIncrement: true,
+      },
+      id: {
+        type: DataTypes.STRING,
+        defaultValue: DataTypes.UUIDV4,
       },
       name: {
         type: DataTypes.STRING,
@@ -17,7 +21,6 @@ module.exports = (sequelize) => {
       status: {
         type: DataTypes.ENUM,
         values: ["Alive", "Dead", "unknown"],
-        allowNull: false,
         defaultValue: "unknown",
       },
       species: {
